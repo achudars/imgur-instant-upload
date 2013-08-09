@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instant upload to imgur</title>
+    <meta name="keywords" content="imgur, upload, instant, fast, drag and drop">
+    <meta name="description" content="Instant upload to imgur. Just drag an image and get its link fast. Anonymously.">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <a href="https://github.com/achudars/imgur-instant-upload"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    
+    <div id="view1">
+        <div id="top">
+            <span class="accent">Drag and drop</span> an image from desktop to immediately upload it to <span class="accent">Imgur</span>
+        </div>
+
+        <div id="bottom">
+            
+        </div>
+        <input style="visibility: collapse; width: 0px;" type="file" onchange="upload(this.files[0])">
+        <button id="button" onclick="document.querySelector('input').click()">Alternatively click on the button to upload</button>
+    </div>
+
+    <img id="loading" src="ajax-loader.gif">
+
+    <div id="result">
+        <div id="info">
+            <a id="link">It's online!!!</a>
+        </div>
+        <div id="link-to-image"></div>
+        <div id="restart" onclick="location.reload();">Do it again!</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
