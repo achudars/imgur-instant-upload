@@ -54,6 +54,16 @@ body {
 div {
     display: inline-block;
 }
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+input {
+    visibility: collapse;
+    width: 0;
+}
 .uploading div {
     display: none;
 }
